@@ -82,3 +82,10 @@ Codex は以下を重視すること。
 - notebook 依存が強すぎないか
 - テストまたは動作確認方法があるか
 - 今の段階に対して過剰設計ではないか
+
+## 実行環境ルール（運用）
+
+- GitHub関連操作（PR作成・更新・確認）は `gh` を優先して使う。
+- `gh` が PATH に無い場合は `C:\Program Files\GitHub CLI\gh.exe` を使う。
+- Python実行は `python` コマンドを試し、失敗時は `C:\Users\th716\AppData\Local\Programs\Python\Python313\python.exe` を使う。
+- 動作確認やテスト実行時は、可能な限り上記Python実行ファイルで再現確認する。
