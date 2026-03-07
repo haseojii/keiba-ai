@@ -64,3 +64,10 @@ test size: 2
 - `src/keiba_ai/evaluation/`: 評価指標・評価処理
 - `scripts/`: 実行スクリプト
 - `tests/`: テスト
+
+## ログ運用（軽量）
+
+- `logs/experiments/`: 実験実行の記録（条件・結果・メモ）
+- `logs/prs/`: PRの要約記録（変更内容・設計判断・学び・次ステップ）
+
+重い実験管理ツールは使わず、まずはMarkdownログで反復履歴を残します。
