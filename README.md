@@ -59,6 +59,17 @@ test size: 2
 3. 回収率（ROI）評価の導入
 4. パドック画像/動画解析へ拡張
 
+## 実データ取り込み準備
+
+- 実データCSVは `data/raw/` に配置（大容量ファイルはGit管理しない）
+- データ理解は `scripts/inspect_data.py` で開始
+
+```bash
+python scripts/inspect_data.py data/raw/your_dataset.csv
+```
+
+- 確認結果や仮説は `docs/data_notes.md` に記録
+
 ## Features層を入れた理由
 
 このプロジェクトでの「features」は、モデルに渡す学習用テーブルを作る責務です。
