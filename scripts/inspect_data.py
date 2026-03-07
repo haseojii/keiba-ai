@@ -8,7 +8,8 @@ def inspect_csv(csv_path: Path, head_rows: int = 5, show_missing: bool = True) -
     if not csv_path.exists():
         raise FileNotFoundError(f"CSV file not found: {csv_path}")
 
-    df = pd.read_csv(csv_path)
+    # low_memory=False にして列型推定の分割読み込み警告を減らす
+    df = pd.read_csv(csv_path, low_memory=False)
 
     print("=== Dataset Inspection ===")
     print(f"path: {csv_path}")
