@@ -45,9 +45,12 @@ test size: 2
 ## 現在のベースライン
 
 - 入力: `data/processed/baseline_sample.csv`
+- データ読み込み: `src/keiba_ai/data/load_data.py`
+- 特徴量構築: `src/keiba_ai/features/build_features.py`
 - 学習: `src/keiba_ai/models/train_baseline.py`（RandomForestClassifier）
 - 実行入口: `scripts/train_baseline.py`
-- データ読み込み: `src/keiba_ai/data/load_data.py`
+
+現在の学習フローは `load_data -> build_features -> train_baseline_model` です。
 
 ## ロードマップ（短期）
 
@@ -55,6 +58,12 @@ test size: 2
 2. 特徴量エンジニアリングの追加
 3. 回収率（ROI）評価の導入
 4. パドック画像/動画解析へ拡張
+
+## Features層を入れた理由
+
+このプロジェクトでの「features」は、モデルに渡す学習用テーブルを作る責務です。
+今はほぼ素通しですが、先に層を分けておくことで、将来Kaggleの実データに合わせた前処理や特徴量追加を
+`models/` や `scripts/` を大きく崩さずに進められます。
 
 ## 主要ディレクトリ（責務ベース）
 
