@@ -70,6 +70,12 @@ python scripts/inspect_data.py data/raw/your_dataset.csv
 
 - 確認結果や仮説は `docs/data_notes.md` に記録
 
+### 最初の実データ確認手順
+
+1. `scripts/inspect_data.py` で列名・shape・欠損を確認する
+2. `docs/data_notes.md` で target候補 / feature候補 / leakage候補を整理する
+3. 次のPRで最小real-data baseline実装へ進む
+
 ## Features層を入れた理由
 
 このプロジェクトでの「features」は、モデルに渡す学習用テーブルを作る責務です。
